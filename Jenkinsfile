@@ -10,7 +10,15 @@ pipeline {
             steps {
                 sh 'mvn clean package'
             }
-        } 
-    }
+        }
+        stage("info") {
+            steps {
+                pwd
+                uptime
+                whoami
+                echo "$HOSTNAME"
+            }
+        }
+     }
     
 }
