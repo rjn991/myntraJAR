@@ -13,9 +13,9 @@ pipeline {
         }
         stage("info") {
             steps {
-                pwd
-                uptime
-                whoami
+                sh "pwd"
+                sh "uptime"
+                sh "whoami"
                 echo "$HOSTNAME"
             }
         }
